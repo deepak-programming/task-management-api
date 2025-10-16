@@ -2,17 +2,18 @@
 
 
 Setup Instructions
-1. Clone the repository
+# 1. Clone the repository
 git clone https://github.com/deepak-programming/task-management-api.git
 cd task-management-api
 
-2. Install dependencies
+# 2. Install dependencies
 npm install
 
-3. Configure environment variables
+# 3. Configure environment variables
 
 Create a .env file in the project root and fill in:
 
+# env details
 PORT=4000
 MONGO_URI=mongodb+srv://deepak:password12345@cluster0.geqnx1f.mongodb.net/taskManagement?retryWrites=true&w=majority
 JWT_ACCESS_SECRET='secret_key'
@@ -20,18 +21,16 @@ JWT_REFRESH_SECRET=your_refresh_secret
 JWT_ACCESS_EXPIRES_IN=15m   # Access token short-lived
 JWT_REFRESH_EXPIRES_IN=7d   # Refresh token long-lived
 
-4. Run the application
-# for development
+# 4. Run the application
 npm run dev
-
-# or production
+or
 npm start
 
 
 The server will start at:
 http://localhost:4000
 
-Database Schema (MongoDB)
+# Database Schema (MongoDB)
 User
 {
   username: String,
@@ -50,7 +49,7 @@ Task
   updatedAt: Date
 }
 
-Authentication Flow
+# Authentication Flow
 
 Register → create account
 
@@ -65,7 +64,7 @@ Authorization: Bearer <your_token_here>
 
 
 
-API Endpoints (v1)
+# API Endpoints (v1)
 Auth Routes
 POST /api/v1/auth/register
 
